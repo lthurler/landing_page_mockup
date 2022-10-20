@@ -3,8 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+    box-sizing: border-box;    
 }
 
 body {
@@ -18,10 +17,12 @@ header {
     align-items: center;
     justify-content: space-around;
     padding: 15px;
+    border-bottom: 0.4px solid #FFF2E7;
 }
 
 header img {
     height: 100px;
+    
 }
 
 nav {
@@ -34,29 +35,37 @@ nav a {
     color: #FFF2E7;
     font-weight: 400;
     font-size: 18px;
+    text-decoration: none;
 }
 
-main {
-    border-top: 0.4px solid #FFF2E7;
+main {    
     margin-bottom: 48px;
-} 
+}
+
+main>div {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;    
+}
 
 .conteudo-principal {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    padding-bottom: 60px;
+    padding-top: 20px;
 }
 
 #zeus {
-    height: 430px;
-    
+    max-width: 200px;
+    width: 100%;    
 }
 
 .conteudo {
     display: flex;
     flex-direction: column;
-    gap:32px;
+    gap: 32px;
 }
 
 .conteudo h1 {
@@ -87,36 +96,36 @@ main {
 
 .conteudo button:hover {
     background-color: rgba(236, 214,196,0.53);
-
-}
-
-.conteudo-secundario {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    margin-top: 48px;
 }
 
 .conteudo-secundario {
     border-top: 0.4px solid #FFF2E7;
-    padding-top: 48px;
+    padding-top: 60px;
     font-family: 'Righteous', cursive;
     font-weight: 400;
     color:#FFF2E7;
     font-size: 24px;
-    margin-bottom: 16px;
+    padding-bottom: 60px;
+}
+
+.conteudo-secundario div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
 }
 
 .conteudo-secundario p {
     font-family: 'Righteous', cursive;
-    font-weight: 300;
+    font-weight: 200;
     font-size: 18px;
     color: #ECD6c4;
 }
 
 footer {
-    padding: 32px;
+    padding: 30px;
     border-top: 0.4px solid #FFF2E7;    
 }
 
@@ -126,41 +135,119 @@ footer {
     display: block;
     margin: 0 auto;
     box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 45px;
 }
 
 
 @media (max-width: 460px) {
-    [class*="col-"] {
-        width: 100%;
+     header{
+        justify-content: center;
+        padding-right: 40px;
     }
-
-    body {
-        background-repeat: no-repeat;
-        
-        
-
-    }     
 
     .conteudo-principal {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 40px;
+        padding-top: 30px;
         width: 100%;
+        text-align: center;        
+    }
+       
+    .conteudo {
+        align-items: center;
+    }
+
+    #zeus {
+        padding-top: 40px;
+    }
+
+    .conteudo-secundario div {
+        text-align: center;
+    }
+}
+
+@media (min-height : 1100px) {
+    header{
+        padding-top: 30px;
+    }
+
+    .conteudo-principal {
+        padding-top: 30px;
+        padding-bottom: 60px;    
+    }
+
+    .conteudo-secundario {
+        padding-top: 100px;
+        padding-bottom: 105px;        
+    }
+}
+
+@media (min-height : 1200px) {
+    header{
+        padding-top: 30px;
+        padding-right: 90px;
+    }
+
+    header img {
+        height: 150px;
         
     }
-    
-}
 
-@media (max-width: 760px) {
-    [class*="col-"] {
-        width: 100%;
+    nav {
+        gap: 70px;    
     }
 
-    
-    
+    .conteudo-principal {
+        padding-top: 90px;
+        padding-bottom: 120px;    
+    }
+
+    .conteudo-secundario {
+        padding-top: 110px;
+        padding-bottom: 110px;        
+    }
 }
+
+@media (width: 540px) and (height:720px) {
+    .conteudo-principal {
+        padding-left: 20px;
+        padding-bottom: 50px; 
+        padding-top: 20px;   
+    }
+
+    .conteudo-secundario {
+        padding-left: 16px;        
+    }
+
+    .conteudo-secundario p {
+        padding-left: 20px;
+    }
+}
+
+ @media (max-width : 280px) {
+    #zeus {
+        padding-top: 35px;
+    }
+
+     header{
+        padding-left: 23px;
+        
+    } 
+
+    header img {
+        height: 70px;
+        
+    }
+
+    nav {
+        gap: 20px;    
+    }
+}
+
+
+
 
 
 
